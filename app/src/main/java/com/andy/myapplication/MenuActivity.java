@@ -12,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -30,7 +29,7 @@ public class MenuActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent =new Intent(this,Years.class);
+        Intent intent =new Intent(this,AllListFrags.class);
         ViewHolder holder= (ViewHolder) view.getTag();
         SingleItem temp= (SingleItem) holder.image.getTag();
         intent.putExtra("branchName",temp.branchName);
@@ -60,7 +59,7 @@ class MenuAdapter extends BaseAdapter{
         list=new ArrayList<SingleItem>();
         Resources res=context.getResources();
         String[] tempBranchName=res.getStringArray(R.array.branch_names);
-        int[] Image ={R.drawable.cs,R.drawable.eee,R.drawable.ecs,R.drawable.isc,R.drawable.mech,R.drawable.civil,R.drawable.bs};
+        int[] Image ={R.drawable.cs,R.drawable.isc,R.drawable.ece,R.drawable.eee,R.drawable.civil,R.drawable.mech,R.drawable.bs};
         for(int i=0;i<7;i++)
         {
             SingleItem tempBranch =new SingleItem(Image[i],tempBranchName[i]);
