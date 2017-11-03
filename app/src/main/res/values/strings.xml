@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string-array name="branch_names">
+        <item>CS</item>
+        <item>ISC</item>
+        <item>ECE</item>
+        <item>EEE</item>
+        <item>CIVIL</item>
+        <item>MECH</item>
+        <item>Basic Science</item>
+    </string-array>
+</resources>
